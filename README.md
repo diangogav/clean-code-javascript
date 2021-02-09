@@ -61,13 +61,11 @@ de los primeros borradores. En vez de eso, ¡Vence al código!
 const yyyymmdstr = moment().format("YYYY/MM/DD");
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const fechaACtual = moment().format("YYYY/MM/DD");
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Utiliza el mismo tipo de vocabulario para el mismo tipo de variables
 
@@ -79,13 +77,11 @@ conseguirDatosCliente();
 conseguirRegistroCliente();)
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 conseguirUsuario();
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Utiliza nombres que puedan ser buscados
 
@@ -104,7 +100,7 @@ pueden ayudan a identificar constantes no nombradas.
 setTimeout(blastOff, 86400000);
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 // Declaralas como constantes nombradas
@@ -112,8 +108,6 @@ const MILISEGUNDOS_POR_DIA = 86400000;
 
 setTimeout(blastOff, MILISEGUNDOS_POR_DIA);
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Utiliza variables explicativas
 
@@ -128,7 +122,7 @@ guardarCP(
 );
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const direccion = "One Infinite Loop, Cupertino 95014";
@@ -137,8 +131,6 @@ const [, ciudad, codigoPostal] =
   direccion.match(expresionRegularCodigoPostalCiudad) || [];
 guardarCP(ciudad, codigoPostal);
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita relaciones mentales
 
@@ -159,7 +151,7 @@ ciudades.forEach(l => {
 });
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const ciudades = ["Barcelona", "Madrid", "Sitges"];
@@ -172,8 +164,6 @@ ciudades.forEach(direccion => {
   dispatch(direccion);
 });
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### No añadas contexto innecesario
 
@@ -193,7 +183,7 @@ function pintarCoche(coche) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const Coche = {
@@ -206,8 +196,6 @@ function pintarCoche(coche) {
   coche.color = "Rojo";
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Utiliza argumentos por defecto en vez de circuitos cortos o condicionales
 
@@ -226,15 +214,13 @@ function crearMicroCerveceria(nombre) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function crearMicroCerveceria(nombre = "Hipster Brew Co.") {
   // ...
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Funciones
 
@@ -274,7 +260,7 @@ function crearMenu(titulo, cuerpo, textoDelBoton, cancelable) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function crearMenu({ titulo, cuerpo, textoDelBoton, cancelable }) {
@@ -288,8 +274,6 @@ crearMenu({
   cancelable: true
 });
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Las funciones deberían hacer una cosa
 
@@ -313,7 +297,7 @@ function enviarCorreoAClientes(clientes) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function enviarCorreoClientesActivos(clientes) {
@@ -325,8 +309,6 @@ function esClienteActivo(cliente) {
   return historicoDelCliente.estaActivo();
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Los nombres de las funciones deberían decir lo que hacen
 
@@ -343,7 +325,7 @@ const fecha = new Date();
 añadirAFecha(fecha, 1);
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function añadirMesAFecha(mes, fecha) {
@@ -353,8 +335,6 @@ function añadirMesAFecha(mes, fecha) {
 const fecha = new Date();
 añadirMesAFecha(1, fecha);
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Las funciones deberían ser únicamente de un nivel de abstracción
 
@@ -389,7 +369,7 @@ function analizarMejorAlternativaJavascript(codigo) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function analizarMejorAlternativaJavascript(codigo) {
@@ -425,8 +405,6 @@ function lexer(tokens) {
   return ast;
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Elimina código duplicado
 
@@ -486,7 +464,7 @@ function mostrarListaJefes(jefes) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function mostrarListaEmpleados(empleados) {
@@ -513,8 +491,6 @@ function mostrarListaEmpleados(empleados) {
 }
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Asigna objetos por defecto con Object.assign
 
 **🙅‍ Mal:**
@@ -538,7 +514,7 @@ function crearMenu(config) {
 crearMenu(configuracionMenu);
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const configuracionMenu = {
@@ -566,8 +542,6 @@ function crearMenu(configuracion) {
 crearMenu(configuracionMenu);
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### No utilices banderas o flags
 
 Las banderas o _flags_ te indican de que esa función hace más de una cosa. Ya
@@ -586,7 +560,7 @@ function crearFichero(nombre, temporal) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function crearFichero(nombre) {
@@ -597,8 +571,6 @@ function crearFicheroTemporal(nombre) {
   crearFichero(`./temporal/${nombre}`);
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita los efectos secundarios (parte 1)
 
@@ -635,7 +607,7 @@ separarEnNombreYApellido();
 console.log(nombre); // ['Ryan', 'McDermott'];
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function separarEnNombreYApellido) {
@@ -648,8 +620,6 @@ const nuevoNombre = separarEnNombreYApellidoe);
 console.log(nombre); // 'Ryan McDermott';
 console.log(nuevoNombre); // ['Ryan', 'McDermott'];
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita los efectos secundarios (parte 2)
 
@@ -695,15 +665,13 @@ const añadirObjetoAlCarrito = (carrito, objeto) => {
 };
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const añadirObjetoAlCarrito = (carrito, objeto) => {
   return [...carrito, { objeto, fecha: Date.now() }];
 };
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### No escribas en variables globales
 
@@ -726,7 +694,7 @@ Array.prototype.diff = function diff(matrizDeComparación) {
 };
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class SuperArray extends Array {
@@ -736,8 +704,6 @@ class SuperArray extends Array {
   }
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Da prioridad a la programación funcional en vez de la programación imperativa
 
@@ -774,7 +740,7 @@ for (let i = 0; i < datosSalidaProgramadores.length; i++) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const datosSalidaProgramadores = [
@@ -801,8 +767,6 @@ const salidaFinal = datosSalidaProgramadores
   .reduce((totalLinias, linias) => totalLinias + linias);
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Encapsula los condicionales
 
 **🙅‍ Mal:**
@@ -813,7 +777,7 @@ if (fsm.state === "cogiendoDatos" && estaVacio(listaNodos)) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function deberiaMostrarSpinner(fsm, listaNodos) {
@@ -824,8 +788,6 @@ if (deberiaMostrarSpinner(fsmInstance, listNodeInstance)) {
   // ...
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita condicionales negativos
 
@@ -841,7 +803,7 @@ if (!noEstaElNodoPresente(node)) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function estaElNodoPresente(node) {
@@ -852,8 +814,6 @@ if (estaElNodoPresente(node)) {
   // ...
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita condicionales
 
@@ -884,7 +844,7 @@ class Avion {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class Avion {
@@ -913,8 +873,6 @@ class Cessna extends Avion {
 }
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Evita el control de tipos (parte 1)
 
 Javascript es un lenguaje no tipado. Esto significa que las funciones pueden recibir
@@ -935,15 +893,13 @@ function viajarATexas(vehiculo) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function viajarATexas(vehiculo) {
   vehiculo.mover(this.ubicacionActual, new Localizacion("texas"));
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita control de tipos (parte 2)
 
@@ -972,15 +928,13 @@ function combina(valor1, valor2) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function combina(valor1, valor2) {
   return valor1 + valor2;
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### No optimizes al máximo
 
@@ -1000,15 +954,13 @@ for (let i = 0, tamaño = lista.length; i < tamaño; i++) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 for (let i = 0; i < lista.length; i++) {
   // ...
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Borra código inútil
 
@@ -1031,7 +983,7 @@ const peticion = nuevoModuloDePeticiones;
 calculadorDeInventario("manzanas", peticion, "www.inventory-awesome.io");
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function nuevoModuloDePeticiones(url) {
@@ -1041,8 +993,6 @@ function nuevoModuloDePeticiones(url) {
 const peticion = nuevoModuloDePeticiones;
 calculadorDeInventario("manzanas", peticion, "www.inventory-awesome.io");
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Objectos y estructuras de datos
 
@@ -1073,7 +1023,7 @@ const cuenta = crearCuentaBancaria();
 cuenta.balance = 100;
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function crearCuentaBancaria() {
@@ -1102,8 +1052,6 @@ const cuenta = crearCuentaBancaria();
 cuenta.introducirBalance(100);
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Hacer que los objetos tengan atributos/métodos privados
 
 Esto se puede hacer mediante `clojures` _(de ES5 en adelante)_.
@@ -1125,7 +1073,7 @@ delete empleado.nombre;
 console.log(`Nombre del empleado: ${empleado.cogerNombre()}`); // Nombre del empleado: undefined
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function crearEmpleado(name) {
@@ -1141,8 +1089,6 @@ console.log(`Nombre del empleado: ${empleado.cogerNombre()}`); // Nombre del emp
 delete empleado.name;
 console.log(`Nombre del empleado: ${empleado.cogerNombre()}`); // Nombre del empleado: John Doe
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Clases
 
@@ -1195,7 +1141,7 @@ Humano.prototype.constructor = Humano;
 Humano.prototype.hablar = function hablar() {};
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class Animal {
@@ -1230,8 +1176,6 @@ class Human extends Mamifero {
   }
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Utiliza el anidación de funciones
 
@@ -1274,7 +1218,7 @@ coche.introducirColor("rosa");
 coche.guardar();
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class Coche {
@@ -1313,8 +1257,6 @@ const coche = new Coche("Ford", "F-150", "rojo")
   .introducirColor("rosa")
   .guardar();
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Prioriza la composición en vez de la herecia
 
@@ -1359,7 +1301,7 @@ class InformacionImpuestosEmpleado extends Empleado {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class InformacionImpuestosEmpleado {
@@ -1383,8 +1325,6 @@ class Empleado {
   // ...
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## **SOLID**
 
@@ -1418,7 +1358,7 @@ class OpcionesUsuario {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class AutenticationUsuario {
@@ -1444,8 +1384,6 @@ class UserSettings {
   }
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Principio de abierto/cerrado (OCP)
 
@@ -1498,7 +1436,7 @@ function hacerLlamadaHttp(url) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class AdaptadorAjax extends Adapter {
@@ -1535,8 +1473,6 @@ class EjecutadorPeticionesHttp {
   }
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Principio de sustitución de Liskov (LSP)
 
@@ -1605,7 +1541,7 @@ const rectangulos = [new Rectangulo(), new Rectangulo(), new Cuadrado()];
 renderizaRectangulosLargos(rectangulos);
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class Forma {
@@ -1652,8 +1588,6 @@ const shapes = [new Rectangulo(4, 5), new Rectangulo(4, 5), new Cuadrado(5)];
 renderizaRectangulosLargos(shapes);
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ### Principio de Segregacion de Interfaces (ISP)
 
 Javascript no dispone de interfaces así que no podemos aplicar el principio como
@@ -1695,7 +1629,7 @@ const $ = new DOMTraverser({
 });
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class DOMTraverser {
@@ -1728,8 +1662,6 @@ const $ = new DOMTraverser({
   }
 });
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Principio de Inversión de Dependencias (DIP)
 
@@ -1793,7 +1725,7 @@ const rastreadorDeInventario = new RastreadorDeInventario([
 rastreadorDeInventario.pedirArticulos();
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class RastreadorDeInventario {
@@ -1841,8 +1773,6 @@ const rastreadorDeInventario = new RastreadorDeInventario(
 rastreadorDeInventario.pedirArticulos();
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ## **Testing**
 
 El testing es más importante que la entrega. Si no tienes test o tienes muchos
@@ -1886,7 +1816,7 @@ describe("MakeMomentJSGreatAgain", () => {
 });
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 import assert from "assert";
@@ -1911,8 +1841,6 @@ describe("MakeMomentJSGreatAgain", () => {
   });
 });
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Concurrencia
 
@@ -1951,7 +1879,7 @@ get(
 );
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 import { get } from "request";
@@ -1968,8 +1896,6 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
     console.error(err);
   });
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Async/Await is incluso más limpio que las Promesas
 
@@ -1998,7 +1924,7 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
   });
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 import { get } from "request-promise";
@@ -2016,8 +1942,6 @@ async function conseguirArticulosDeCodigoLimpio() {
   }
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Manejo de errores
 
@@ -2043,7 +1967,7 @@ try {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 try {
@@ -2076,7 +2000,7 @@ cogerDatos()
   });
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 cogerDatos()
@@ -2093,8 +2017,6 @@ cogerDatos()
     // O hazlas todas!
   });
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Formato
 
@@ -2128,7 +2050,7 @@ class animal {}
 class Alpaca {}
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 const DIAS_POR_SEMANA = 7;
@@ -2143,8 +2065,6 @@ function restablecerBaseDeDatos() {}
 class Animal {}
 class Alpaca {}
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Funciones que llaman y funciones que son llamadas, deberían estar cerca
 
@@ -2195,7 +2115,7 @@ const review = new RevisionDeRendimiento(empleado);
 review.executarRevision();
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 class RevisionDeRendimiento {
@@ -2235,8 +2155,6 @@ const review = new RevisionDeRendimiento(empleado);
 review.executarRevision();
 ```
 
-**[⬆ Volver arriba](#contenido)**
-
 ## Comentarios
 
 ### Comenta únicamente la lógica de negocio que es compleja
@@ -2269,7 +2187,7 @@ function hashIt(datos) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function hashIt(datos) {
@@ -2285,8 +2203,6 @@ function hashIt(datos) {
   }
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### No dejes código comentado en tu repositorio
 
@@ -2305,13 +2221,11 @@ hacerCosas();
 // estoHaceMaravillas();
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 hacerCosas();
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### No hagas un diario de comentarios
 
@@ -2334,15 +2248,13 @@ function combinar(a, b) {
 }
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 function combinar(a, b) {
   return a + b;
 }
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ### Evita los marcadores de secciones
 
@@ -2370,7 +2282,7 @@ const acciones = function() {
 };
 ```
 
-**👨‍🏫 Bien:**
+**✅ Bien:**
 
 ```javascript
 $scope.modelo = {
@@ -2382,8 +2294,6 @@ const acciones = function() {
   // ...
 };
 ```
-
-**[⬆ Volver arriba](#contenido)**
 
 ## Traducciones
 
@@ -2407,5 +2317,3 @@ También esta disponible en otros idiomas
   [andirkh/clean-code-javascript/](https://github.com/andirkh/clean-code-javascript/)
 - ![it](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **Italian**:
   [frappacchio/clean-code-javascript/](https://github.com/frappacchio/clean-code-javascript/)
-
-**[⬆ Volver arriba](#contenido)**
